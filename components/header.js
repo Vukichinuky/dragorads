@@ -17,7 +17,7 @@ export default function Home() {
     height={100}
     />
  </div>
- <div className=' py-12 col-start-2  px-10 text-center font-bold text-white felx justify-center align-middle '>
+ <div className=' py-12 col-start-2 mt-2  px-10 text-center font-bold text-white felx justify-center align-middle '>
   <p><span className=' text-xl 2xl:text-2xl'>РЕПУБЛИКА СРПСКА</span> <br />
 <span className=' text-sm 2xl:text-xl'>
   
