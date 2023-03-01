@@ -5,8 +5,8 @@ import Image from "next/image";
 
 function BlogPost({ title, author, coverPhoto, datepublish, slug, content}) {
   return (
-    <div className=" hover:opacity-70 hover:animate-pulse ">
-        <div className="    overflow-hidden hover:sm:w-80     w-72 bg-orange-600  sm:w-96 shadow-xl rounded-3xl m-1 ">
+    <div className=" hover:opacity-70 ">
+        <div className="    overflow-hidden hover:animate-pulse    w-72 bg-orange-600  sm:w-96 shadow-xl rounded-3xl m-1 ">
           <Link href={`/posts/`+ slug}>
             <div className={styles.imgContainer}>
               <Image layout="fill" src={coverPhoto.url} alt="ccvb" />

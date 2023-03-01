@@ -9,10 +9,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav className=" ">
-      <div className=" font-medium ">
+      <div className=" font-bold  ">
         <div className="z-50  md:w-auto   flex justify-between">
        
-          <div className="text-3xl  w-full bg-white  sticky-top opacity-80 fixed flex " onClick={() => setOpen(!open)}>
+          <div className="   w-full bg-white  sticky-top opacity-80 fixed flex " onClick={() => setOpen(!open)}>
           <img name={`${open ? "close" : 'menu'}`} className=" md:hidden m-2 h-10 z-50  " src="/menu-svgrepo-com.svg" alt="" />
 
           </div>
