@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
         <ul className="md:flex hidden flex-col mt-10 uppercase items-start gap-1 ">
         <li>
-            <Link href="/" className="py-7 px-3 inline-block">
+            <Link href="/" className="  inline-block">
              <p className=" bg-zinc-700 text-slate-400 hover:bg-yellow-500 hover:text-white cursor-pointer  rounded-3xl md:py-4   p-2 px-8
                my-1 mt-3 md:mx-10 ">почетнa</p>
             </Link>
@@ -36,8 +36,8 @@ const Navbar = () => {
         `}
         >
              <li>
-            <Link href="/" className=" ">
-             <p className="  text-zinc-800   font-bold uppercase rounded-3xl md:py-4   p-2 px-8
+            <Link href="/" className=" text-center ">
+             <p className="   text-black hover:text-yellow-500 font-bold uppercase rounded-3xl md:py-4   p-2 px-8
                my-1 mt-3 md:mx-10">почетнa</p>
             </Link>
           </li>
