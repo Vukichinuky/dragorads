@@ -9,7 +9,7 @@ const Meta = (props) => (
 <meta property="og:site_name" content="Основна школа “Вук Караџић” Роћевић" />
 <meta property="og:url" content="https://www.osvukkaradzicrocevic.org/" />  
 
-<link rel="icon" type="image/png" href="/Image (7).jpeg" />
+<link rel="icon" type="image/png" href="/Image (1) (1).png" />
 <link rel="apple-touch-icon" href="/Image (7).jpeg" />
 <meta property="og:image" content="/Image (7).jpeg" />  
 </Head>
