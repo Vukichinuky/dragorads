@@ -14,6 +14,7 @@ import { Navigation } from "swiper";
 import { Autoplay } from "swiper"; 
 import { Pagination } from "swiper";
 import Navbar from '/components/Navbar.jsx'
+import Meta from '/components/seo-meta.js'
 
 
 
@@ -55,11 +56,8 @@ export default function Home({posts}) {
 
   return (
     <div >
-      <Head>
-        <title>Osnovna Skola Vuk Karadzic</title>
-        <meta name="description" content="Web sajt OS Vuk Karadzic Rocevic" />
-        <link rel="icon" href="/Logo,_Os_Vuk_Karadzic_Rocevic.png" />
-      </Head>
+      <Meta/>
+      
 
       <main className='  float-none m-auto shadow-2xl  '>
     <section>
