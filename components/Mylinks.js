@@ -44,7 +44,7 @@ export const links = [
         {
           Head: "",
           sublink: [
-            { name: "Обавјештења", link: "/nedovrsene" },
+            { name: "Обавјештења", link: "/obavestenja" },
            
           ],
         },
