@@ -2,6 +2,7 @@ import Head from 'next/head'
 const Meta = (props) => (      
 <Head>
 <title></title>
+<meta name="google-site-verification" content="ejVOTfXGoSpsrvI3o6wCO8EZFZbgVMKPPHoBTE-jgD8" />
 <meta name="description" content="Данас Основна школа “Вук Караџић” Роћевић броји преко 480 ученика и преко 60 запослених лица. Основна школа Роћевић поседује два подручна одјељења, подручно одјељење у Брањеву и подручно одјељење у Кисељаку." />
 <meta property="og:type" content="website" />
 <meta name="og:title" property="og:title" content="Основна школа “Вук Караџић” Роћевић " />
