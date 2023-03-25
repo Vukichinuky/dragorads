@@ -12,7 +12,7 @@ import Footer from '/components/footer.js'
 import { Navigation } from "swiper";
 import { Autoplay } from "swiper";
 import { Pagination } from "swiper";
-import NavVert from '/components/NavVert.js'
+import NavVert from '/components/NavVert.jsx'
 import Meta from '/components/seo-meta.js'
 
 

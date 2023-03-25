@@ -1,4 +1,4 @@
-import NavVert from '../components/NavVert'
+import NavVert from '../components/NavVert.jsx'
 import Header from '/components/header.js'
 import Footer from '/components/footer.js'
 import Head from 'next/head'
