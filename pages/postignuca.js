@@ -20,7 +20,7 @@ export default function Oskoli() {
 
                     <div className=''>
 
-                        <div className=' text-center mt-28 text-justify  max-w-6xl m-auto relative   z-10 '>
+                        <div className=' text-center mt-28  max-w-6xl m-auto relative   z-10 '>
 
                             <h1 className=' pb-32  font-bold text-yellow-600  text-center sm:text-2xl'>Постигнућа у претходном периоду</h1>
                             <h2 className=' font-bold  ml-10   sm:text-2xl'>Најважнији успјеси школе</h2>
