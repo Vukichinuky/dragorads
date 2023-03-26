@@ -217,3 +217,15 @@ a {
   --tw-blur: blur(4px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
+
+.kkk {
+  background: rgba(148, 163, 184, 0.6);
+
+
+}
+
+.rounded1 {
+  border-radius: 1rem
+    /* 16px */
+  ;
+}

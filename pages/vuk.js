@@ -2,7 +2,7 @@ import NavVert from '/components/NavVert.jsx'
 import Header from '/components/header.js'
 import Footer from '/components/footer.js'
 import Head from 'next/head'
-
+import Image from 'next/image'
 export default function Oskoli() {
     return (
         <div>
@@ -58,9 +58,20 @@ export default function Oskoli() {
                                 Када је умро,  Вук Караџић је био оплакан од цијелог српства и цијелог ученог словенског свијета.
                             </p>
                             <img className='my-14' src="/Image (10).jpeg" alt="" />
-                            <h2 className=' font-bold italic text-left ml-10 my-5  sm:text-2xl'>Вукова спомен кућа у Тршићу</h2>
+                            <h2 className=' font-bold italic  ml-10 my-5  text-center sm:text-2xl'>Вукова спомен кућа у Тршићу</h2>
                             <img className='flex m-auto  my-14' src="/Image (11).jpeg" alt="" />
-                            <h2 className=' font-medium italic mb-14  max-w-6xl text-justify my-5  sm:text-2xl'>Портрет младог Вука Стефановића Караџића 1816. године. Уље на платну, рад Павела Ђурковића (1772-1830). Овај портрет Вука репродукован је на новчаницу од 10 динара. Изложен је у сталној поставци Музеја Вука и Доситеја у Београду.</h2>
+                            <div className='flex justify-center'>
+                                <h2 className=' font-bold italic max-w-xl  ml-10 my-5  text-center sm:text-2xl'>Портрет младог Вука Стефановића Караџића 1816. године. Уље на платну, рад Павела Ђурковића (1772-1830). Овај портрет Вука репродукован је на новчаницу од 10 динара. Изложен је у сталној поставци Музеја Вука и Доситеја у Београду.</h2>
+                            </div>
+                            <div className='flex justify-end items-end'>
+                                <Image
+                                    className="  transition duration-300 ease-in-out hover:scale-110     rounded-3xl "
+                                    alt="ilustracija masine za stampanje "
+                                    src={'/../public/Logo,_Os_Vuk_Karadzic_Rocevic.png'}
+                                    width={250}
+                                    height={250}
+                                    priority />
+                            </div>
                         </div>
 
 
