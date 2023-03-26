@@ -6,7 +6,7 @@ import Image from "next/image";
 function BlogPost({ title, author, coverPhoto, datepublish, slug, content }) {
   return (
     <div className=" ">
-      <div className=" p-10    overflow-hidden hover:animate-pulse  shadow-black  w-96 bg-[#FFBC42]  shadow-lg rounded-3xl m-1 ">
+      <div className=" p-10    overflow-hidden hover:animate-pulse  shadow-black w-72 mb-10 md:w-96 bg-[#FFBC42]  shadow-lg rounded-3xl m-1 ">
         <div className="">
           <Link href={`/posts/` + slug}>
             <div className={styles.imgContainer}>

@@ -75,11 +75,11 @@ export default function BlogPost({ post }) {
       <div className="sm:flex sm:justify-center  max-w-6xl m-auto sm:items-center sm:flex-col ">
         <div className="sm:flex sm:flex-col  sm:justify-evenly sm:mt-20">
           <img
-            className=' m-auto sm:rounded-2xl sm:shadow-2xl '
+            className=' m-auto w-72 sm:rounded-2xl sm:shadow-2xl '
             src={post.coverPhoto.url}
             alt={post.title}
           />
-          <div className=' p-10 '>
+          <div className=' p-10 m-10'>
             <div className={styles.authdetails}>
               <img src={post.author.avatar.url} alt={post.author.ime} />
               <div className=' '>
