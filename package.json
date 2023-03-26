@@ -28,6 +28,7 @@
     "react-experiments": "^5.1.0",
     "react-ionicons": "^1.4.6",
     "react-transition-group": "^4.4.5",
+    "sharp": "^0.32.0",
     "slider": "^1.0.4",
     "stable": "^0.1.8",
     "swiper": "^8.4.6",
