@@ -128,7 +128,7 @@ export default function Home({ posts }) {
           </div>
         </section>
 
-        <div className=' bg-amber-400 w-48 text-white  flex justify-center m-auto shadow-2xl p-4  rounded-3xl mt-10 decoration-white'>
+        <div className=' bg-[#F37748]  transition duration-300 ease-in-out hover:scale-110  w-48 text-white shadow-black  flex justify-center m-auto shadow-lg p-4  rounded-3xl mt-10 decoration-white'>
           <Link className='text-white' style={{ textDecoration: 'none' }} href={'/obavestenja'}>
             Сва обавјештења</Link>
         </div>
