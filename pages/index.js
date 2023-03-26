@@ -115,17 +115,19 @@ export default function Home({ posts }) {
         <section>
           <h1 className=' text-center m-20 font-bold text-amber-400  text-3xl sm:text-7xl ' >Новости</h1>
           <div className={styles.container}>
-            {posts.map((post) => (
-              <BlogCard title={post.title}
+            {posts.slice(0, 3).map((post) => (
+              <BlogCard
+                title={post.title}
                 author={post.author}
                 coverPhoto={post.coverPhoto}
                 key={post.id}
                 datepublish={post.datepublish}
                 content={post.content}
-                slug={post.slug} />
+                slug={post.slug}
+              />
             ))}
-
           </div>
+
         </section>
 
         <div className=' bg-[#F37748]  transition duration-300 ease-in-out hover:scale-110  w-48 text-white shadow-black  flex justify-center m-auto shadow-lg p-4  rounded-3xl mt-10 decoration-white'>
