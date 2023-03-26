@@ -301,7 +301,7 @@ export default function Home({ posts }) {
                 </div></SwiperSlide>
             </Swiper>
           </>
-          <div className='flex  max-sm:w-20 items-center justify-center mb-20 m-3'>
+          <div className='flex   items-center justify-center mb-20 m-3'>
             <Link href={'https://www.google.com/maps/place/O%C5%A0+%22Vuk+Karad%C5%BEi%C4%87%22+-+Ro%C4%87evi%C4%87/@44.5359128,19.1415876,17z/data=!4m14!1m7!3m6!1s0x475961b2c4b213a1:0x7f9d16c6ff6ca75e!2zT8WgICJWdWsgS2FyYWTFvmnEhyIgLSBSb8SHZXZpxIc!8m2!3d44.535909!4d19.1437763!16s%2Fg%2F11jjw7kvpz!3m5!1s0x475961b2c4b213a1:0x7f9d16c6ff6ca75e!8m2!3d44.535909!4d19.1437763!16s%2Fg%2F11jjw7kvpz'}>
               <Image
                 className="    transition duration-300 ease-in-out hover:scale-110     rounded-3xl "
