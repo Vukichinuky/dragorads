@@ -22,21 +22,21 @@ const graphcms = new GraphQLClient(
 );
 const QUERY = gql`
  {
-  posts {
+  posts(orderBy: datepublish_DESC, first: 3) {
     id
     title
     datepublish
     slug
-    content{
+    content {
       html
     }
-    author{
+    author {
       ime
-      avatar{
+      avatar {
         url
       }
     }
-    coverPhoto{
+    coverPhoto {
       url
     }
     }
