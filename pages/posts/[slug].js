@@ -1,7 +1,7 @@
 import { GraphQLClient, gql } from "graphql-request";
 import styles from "../../styles/Slug.module.css";
 import moment from "moment";
-import NavbarVer from '/components/Navbarvert.jsx'
+import NavVert from '/components/NavVert.jsx'
 import Header from '/components/header.js'
 import Footer from '/components/footer.js'
 
@@ -69,7 +69,7 @@ export default function BlogPost({ post }) {
       <nav>
         <Header />
 
-        <NavbarVer />
+        <NavVert />
       </nav>
 
       <div className="sm:flex sm:justify-center  max-w-6xl m-auto sm:items-center sm:flex-col ">
