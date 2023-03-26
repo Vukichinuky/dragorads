@@ -67,8 +67,8 @@ export default function Oskoli() {
                                 <Image
                                     className="  transition duration-300 ease-in-out hover:scale-110     rounded-3xl "
                                     alt="Logo skole "
-                                    src={'/../public/Logo,_Os_Vuk_Karadzic_Rocevic.png'}
-                                    width={250}
+                                    src={'/Logo,_Os_Vuk_Karadzic_Rocevic.png'}
+                                    width={700}
                                     height={250}
                                     priority />
                             </div>

@@ -306,8 +306,8 @@ export default function Home({ posts }) {
               <Image
                 className="    transition duration-300 ease-in-out hover:scale-110     rounded-3xl "
                 alt="Mapa skole "
-                src={'/../public/mapa.png'}
-                width={300}
+                src={'/mapa.png'}
+                width={700}
                 height={250}
               />
             </Link>
