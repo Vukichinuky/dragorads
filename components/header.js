@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
 
-    <header className=" bg-amber-400 sm:pt-10 sm:grid grid-rows-none grid-cols-3">
+    <header className=" bg-amber-400 pt-20 sm:pt-10 sm:grid grid-rows-none grid-cols-3">
 
       <div className='max-sm:hidden  m-auto'>
         <Image
