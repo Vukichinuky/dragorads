@@ -36,7 +36,7 @@ export default function Oskoli() {
                         <div className='flex justify-end items-end'>
                             <Image
                                 className="  transition duration-300 ease-in-out hover:scale-110     rounded-3xl "
-                                alt="ilustracija masine za stampanje "
+                                alt="logo skole"
                                 src={'/../public/Logo,_Os_Vuk_Karadzic_Rocevic.png'}
                                 width={250}
                                 height={250}
