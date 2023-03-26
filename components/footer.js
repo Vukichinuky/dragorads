@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className='h-2xl sm:grid sm:grid-cols-3 bg-orange-300'>
+    <footer className='h-2xl text-xs sm:grid sm:grid-cols-3 bg-orange-300'>
 
       <div>
         <h5 className=' text-center font-bold text-xl p-10'>Контакт информације</h5>
@@ -78,7 +78,7 @@ export default function Footer() {
 
 
         </div>
-        <div className="flex align-middle items-center my-4 justify-center">
+        <div className="flex text-xs align-middle items-center my-4 justify-center">
           <img className="w-16 h-16 p-2 mx-3 ml-20" src="/email.png" alt="" />
           <h6 className=" m-2 ">
             Е-маил: : <br />
