@@ -5,6 +5,7 @@ import NavVert from '/components/NavVert.jsx'
 import Header from '/components/header.js'
 import Footer from '/components/footer.js'
 
+export const revalidate = 600;
 
 const graphcms = new GraphQLClient(
   "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cld1yz5560k8j01umg34xfwv5/master");
@@ -57,8 +58,7 @@ export async function getStaticProps({ params }) {
     props: {
       post,
     },
-    revalidate:
-      600,
+    revalidate: 30,
   };
 }
 
