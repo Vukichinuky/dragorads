@@ -89,7 +89,7 @@ export const links2 = [
             {
                 Head: "",
                 sublink: [
-                    { names: "Ванредна настава", link1: "/nedovrsene" },
+                    { names: "Ваннаставне активности", link1: "/nedovrsene" },
 
                 ],
             },
