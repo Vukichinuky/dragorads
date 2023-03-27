@@ -83,7 +83,7 @@ export default function BlogPost({ post }) {
             <div className={styles.authdetails}>
               <img src={post.author.avatar.url} alt={post.author.ime} />
               <div className=' '>
-                <h6>By {post.author.ime} </h6>
+                <h6>Od {post.author.ime} </h6>
                 <h6 className={styles.date}>
                   {moment(post.datepublish).format("MMMM d, YYYY")}
                 </h6>
