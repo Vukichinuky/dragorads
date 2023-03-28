@@ -22,7 +22,7 @@ const graphcms = new GraphQLClient(
 );
 const QUERY = gql`
  {
-  posts {
+  posts(orderBy: datepublish_DESC) {
     id
     title
     datepublish
