@@ -39,8 +39,8 @@ const Navbar = () => {
         `}
         >
           <li>
-            <Link href="/" className=" text-center ">
-              <p className="   bg-zinc-700  hover:bg-yellow-500 hover:text-white text-slate-400  rounded-3xl md:py-4    p-3 font-bold uppercase  px-8
+            <Link href="/" className=" text-center flex justify-center items-center">
+              <p className="   bg-zinc-700 w-36   hover:bg-yellow-500 hover:text-white text-slate-400  rounded-3xl md:py-4    p-2 font-bold uppercase  
                my-1 mt-3 md:mx-10">почетнa</p>
             </Link>
           </li>
