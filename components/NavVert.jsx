@@ -14,9 +14,9 @@ const NavVert = () => {
 
                     <div className="w-full bg-white sticky-top opacity-80 fixed flex" onClick={() => setOpen(!open)}>
                         {open ? (
-                            <img className="md:hidden m-2 h-10 p-2 z-50" src="/x-symbol-svgrepo-com (2).svg" alt="Close" />
+                            <img className="md:hidden m-2 h-10 p-2 z-50" src="/x.svg" alt="Close" />
                         ) : (
-                            <img className="md:hidden m-2 h-10 z-50" src="/menu-duo-lg-svgrepo-com.svg" alt="Menu" />
+                            <img className="md:hidden m-2 h-10 z-50" src="/menu-duo.svg" alt="Menu" />
                         )}
                     </div>
                 </div>
