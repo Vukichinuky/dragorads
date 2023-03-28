@@ -11,7 +11,7 @@ const NavLinksVert = () => {
                 <div key={link1.names}>
                     <div className=" flex  flex-col items-center  text-left md:cursor-pointer group">
                         <h1
-                            className=" bg-zinc-700  hover:bg-yellow-500 hover:text-white text-slate-400  rounded-3xl md:py-4   p-2 px-8
+                            className=" bg-zinc-700  hover:bg-yellow-500 hover:text-white text-slate-400  rounded-3xl md:py-4   p-2 p-3
                my-1 mt-3 md:mx-10  group"
 
                             onClick={() => {

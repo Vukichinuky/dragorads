@@ -12,9 +12,12 @@ const NavVert = () => {
             <div className=" font-bold  ">
                 <div className="z-50  md:w-auto   flex justify-between">
 
-                    <div className="   w-full bg-white  sticky-top opacity-80 fixed flex " onClick={() => setOpen(!open)}>
-                        <img name={`${open ? "close" : 'menu'}`} className=" md:hidden m-2 h-10 z-50  " src="/menu-svgrepo-com.svg" alt="" />
-
+                    <div className="w-full bg-white sticky-top opacity-80 fixed flex" onClick={() => setOpen(!open)}>
+                        {open ? (
+                            <img className="md:hidden m-2 h-10 p-2 z-50" src="/x-symbol-svgrepo-com (2).svg" alt="Close" />
+                        ) : (
+                            <img className="md:hidden m-2 h-10 z-50" src="/menu-duo-lg-svgrepo-com.svg" alt="Menu" />
+                        )}
                     </div>
                 </div>
                 <ul className="md:flex hidden  mt-10 uppercase items-start gap-1 ">
