@@ -113,7 +113,7 @@ export default function Home({ posts }) {
         </section>
 
         <section>
-          <h1 className=' text-center m-20 font-bold text-amber-400  text-3xl sm:text-7xl ' >Новости</h1>
+          <h1 className=' text-center m-20 font-bold text-amber-400 text-shadow  text-3xl sm:text-7xl ' >Новости</h1>
           <div className={styles.container}>
             {posts.slice(0, 3).map((post) => (
               <BlogCard
@@ -130,7 +130,7 @@ export default function Home({ posts }) {
 
         </section>
 
-        <div className=' bg-[#F37748]  transition duration-300 ease-in-out hover:scale-110  w-48 text-white shadow-black  flex justify-center m-auto shadow-lg p-4  rounded-3xl mt-10 decoration-white'>
+        <div className=' bg-[#f87060]  transition duration-300 ease-in-out hover:scale-110  w-48 text-white shadow-black  flex justify-center m-auto shadow-lg p-4  rounded-3xl mt-10 decoration-white'>
           <Link className='text-white' style={{ textDecoration: 'none' }} href={'/obavestenja'}>
             Сва обавјештења</Link>
         </div>

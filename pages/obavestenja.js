@@ -51,7 +51,7 @@ export async function getStaticProps() {
     revalidate: 130,
   };
 }
-export default function Home({ posts }) {
+export default function Obavestenja({ posts }) {
 
   return (
     <div >

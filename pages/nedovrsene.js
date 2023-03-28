@@ -3,7 +3,7 @@ import Header from '/components/header.js'
 import Footer from '/components/footer.js'
 import Head from 'next/head'
 
-export default function Oskoli() {
+export default function Nedovrsene() {
     return (
         <div>
             <Head>

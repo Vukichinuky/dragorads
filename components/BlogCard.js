@@ -6,7 +6,7 @@ import Image from "next/image";
 function BlogPost({ title, author, coverPhoto, datepublish, slug, content }) {
   return (
     <div className=" ">
-      <div className=" p-10    overflow-hidden hover:animate-pulse  shadow-black w-72 mb-10 md:w-96 bg-[#FFBC42]  shadow-lg rounded-3xl m-1 ">
+      <div className=" p-10   overflow-hidden hover:animate-pulse  shadow-black w-72 mb-10 md:w-96 bg-[#eeeeee]  shadow-lg rounded-3xl m-1 ">
         <div className="">
           <Link href={`/posts/` + slug}>
             <div className={styles.imgContainer}>
@@ -14,18 +14,18 @@ function BlogPost({ title, author, coverPhoto, datepublish, slug, content }) {
             </div>
           </Link>
         </div>
-        <div className=' text-center my-6 text-xl'>
-          <div className=" bg-[#fea400] z-10 relative  rounded-3xl px-5 py-14 shadow-black shadow-lg">
+        <div className=' text-center my-6 text-opacity-60 text-white font-semibold text-xl'>
+          <div className=" bg-[#7e7f9a] z-10 relative  rounded-3xl px-5 py-14 shadow-black shadow-lg">
             <h2>{title}</h2>
           </div>
-          <div className="bg-[#FFD892] -z-10 rounded-3xl px-5 py-10 shadow-black shadow-2xl ">
+          <div className="bg-[#eb9486]  -z-10 rounded-3xl px-5 py-10 shadow-black shadow-2xl ">
             <div className={styles.details}>
               <div className={styles.author}>
                 <img src={author.avatar.url} alt={author.ime} />
                 <h3>{author.name}</h3>
               </div>
               <div className={styles.date}>
-                <h3>{moment(datepublish).format(" DD MMMM YYYY")}</h3>
+                <h3>{moment(datepublish).format(" DD.MM.YYYY.")}</h3>
               </div>
             </div>
           </div>

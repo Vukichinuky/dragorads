@@ -20,6 +20,10 @@
   height: 15rem;
 }
 
+.date {
+  font-size: 1rem;
+}
+
 .card img:hover {
 
   opacity: 0.8;
@@ -56,8 +60,8 @@
 }
 
 .author img {
-  width: 2rem;
-  height: 2rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 5 0%;
 }
 
