@@ -31,7 +31,7 @@ const NavVert = () => {
                 </ul>
                 <div className="md:block hidden">
                 </div>
-                {/* Mobile nav */}
+                {/* Mobile nav izmeni jebeni hamburger menu*/}
                 <ul
                     className={`
         md:hidden bg-white uppercase fixed-top w-full z-40 bottom-0 p-24 pl-4
