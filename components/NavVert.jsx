@@ -40,7 +40,7 @@ const NavVert = () => {
                 >
                     <li>
                         <Link href="/" className=" text-center ">
-                            <p className="   text-black hover:text-yellow-500 font-bold uppercase rounded-3xl md:py-4   p-2 px-8
+                            <p className="   bg-zinc-700  hover:bg-yellow-500 hover:text-white text-slate-400  rounded-3xl md:py-4    p-3 font-bold uppercase  px-8
                my-1 mt-3 md:mx-10">почетнa</p>
                         </Link>
                     </li>
