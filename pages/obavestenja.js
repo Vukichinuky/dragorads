@@ -1,47 +1,43 @@
-import Header from '/components/header.js'
-import styles from "../styles/Home.module.css"
-import Link from 'next/link'
-import { GraphQLClient, gql } from 'graphql-request'
-import BlogCard from '/components/BlogCard'
-import { Swiper, SwiperSlide } from "swiper/react";
+// pages/obavestenja.js
+import Header from "/components/header.js";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import Footer from '/components/footer.js'
+import Footer from "/components/footer.js";
 // import required modules
-import { Navigation } from "swiper";
-import { Autoplay } from "swiper";
-import { Pagination } from "swiper";
-import NavVert from '/components/NavVert.jsx'
-import Meta from '/components/seo-meta.js'
-
-
+import Meta from "/components/seo-meta.js";
+import TwoPostsPic from "/components/TwoPostsPic.js";
+import AllpostsText from "/components/AllpostsText.js";
+import { GraphQLClient, gql } from "graphql-request";
+import dynamic from "next/dynamic";
+const NoSSR = dynamic(() => import("/components/NavVert"), { ssr: false });
 
 const graphcms = new GraphQLClient(
   "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cld1yz5560k8j01umg34xfwv5/master"
 );
 const QUERY = gql`
- {
-  posts(orderBy: datepublish_DESC) {
-    id
-    title
-    datepublish
-    slug
-    content{
-      html
-    }
-    author{
-      ime
-      avatar{
+  {
+    posts(orderBy: datepublish_DESC) {
+      id
+      title
+      datepublish
+      slug
+      content {
+        html
+      }
+      author {
+        ime
+        avatar {
+          url
+        }
+      }
+      coverPhoto {
         url
       }
     }
-    coverPhoto{
-      url
-    }
-    }
   }
 `;
+
 export async function getStaticProps() {
   const { posts } = await graphcms.request(QUERY);
   return {
@@ -51,217 +47,44 @@ export async function getStaticProps() {
     revalidate: 130,
   };
 }
+// pages/obavestenja.js
 export default function Obavestenja({ posts }) {
-
   return (
-    <div >
+    <div>
       <Meta />
 
-
-      <main className='  float-none m-auto shadow-2xl  '>
+      <main className="  float-none m-auto shadow-2xl  ">
         <section>
           <Header />
         </section>
 
-
-
-
-        <NavVert />
-
-
-
-        <section>
-          <div className={styles.container}>
-            {posts.map((post) => (
-              <BlogCard title={post.title}
-                author={post.author}
+        <NoSSR />
+        <section className="flex sm:flex-row flex-col justify-evenly mt-10">
+          <div>
+            <h1 className="text-[#F37748] text-center text-4xl font-bold py-10">
+              Најновија обавјештења
+            </h1>
+            {posts.slice(0, 2).map((post) => (
+              <TwoPostsPic
                 coverPhoto={post.coverPhoto}
-                key={post.id}
-                datepublish={post.datepublish}
-                content={post.content}
-                slug={post.slug} />
+                slug={post.slug}
+                title={post.title}
+              />
             ))}
-
+          </div>
+          <div className=" bg-[#f37748] text-center p-5  m-20 mt-20 rounded-xl">
+            <h1 className=" text-center text-2xl font-bold text-white opacity-60">
+              Сва обавјештења
+            </h1>
+            {posts.map((post) => (
+              <AllpostsText title={post.title} slug={post.slug} />
+            ))}
           </div>
         </section>
-
-
         <section>
-          <>
-            <Swiper slidesPerView={2}
-              autoplay={{
-                delay: 500,
-                disableOnInteraction: false,
-              }}
-              speed={5000}
-              loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Autoplay, Pagination, Navigation]}
-
-
-              className="mySwiper max-sm:hidden  rounded-3xl shadow-2xl m-40  "
-            >
-              <SwiperSlide>
-                <div className='rounded-t-3xl flex sm:justify-around'>
-                  <Link href='https://vladars.net/sr-SP-Cyrl/Vlada/Ministarstva/mpk/Pages/default.aspx'>
-                    <img
-                      className="  "
-                      src="/min-logo.jpg"
-                      alt="image slide 2"
-                    />
-                  </Link>
-                  <Link href='https://www.rpz-rs.org/'>
-                    <img
-                      className="  "
-                      src="/rpz-logo.jpg"
-                      alt="image slide 2"
-                    />
-                  </Link>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className=' flex sm:justify-around'>
-
-                  <Link href='https://ucenik.skolers.org/'>
-                    <img
-                      className="  "
-                      src="/eduis-ednevnik.png"
-                      alt="image slide 2"
-                    />
-                  </Link>
-                  <Link href='https://enastava.skolers.org/'>
-                    <img
-                      className="  "
-                      src="/eNastava-logo-cyr.png"
-                      alt="image slide 2"
-                    />
-                  </Link>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className=' flex align-middle sm:justify-around'>
-
-                  <Link href='https://skolers.org/materijali/covid-19/'>
-                    <img
-                      className="  "
-                      src="/Covid19.png"
-                      alt="image slide 2"
-                    />
-                  </Link>
-                  <Link href='http://eobrazovanje.com/Pages/dositej.aspx'>
-                    <img
-                      className="  "
-                      src="/dositej-logo.png"
-                      alt="image slide 2"
-                    />
-                  </Link>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </>
-          <>
-            <Swiper
-              slidesPerView={1}
-              autoplay={{
-                delay: 500,
-                disableOnInteraction: false,
-              }}
-              speed={5000}
-              loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Autoplay, Pagination, Navigation]}
-
-              className="mySwiper rounded-3xl shadow-2xl   telefon sm:hidden m-40  "
-            >
-              <SwiperSlide>
-                <div className='  flex justify-center sm:justify-around'>
-
-                  <Link href='https://vladars.net/sr-SP-Cyrl/Vlada/Ministarstva/mpk/Pages/default.aspx'>
-                    <img
-                      className="  "
-                      src="/min-logo.jpg"
-                      alt="image slide 2"
-                    />
-                  </Link>
-
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className=' flex justify-center sm:justify-around'>
-
-                  <Link href='https://www.rpz-rs.org/'>
-                    <img
-                      className="  "
-                      src="/rpz-logo.jpg"
-                      alt="image slide 2"
-                    />
-                  </Link>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className=' flex justify-center sm:justify-around'>
-
-                  <Link href='https://ucenik.skolers.org/'>
-                    <img
-                      className="  "
-                      src="/eduis-ednevnik.png"
-                      alt="image slide 2"
-                    />
-                  </Link>
-
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className=''>
-                <div className=' flex align-middle	 justify-center sm:justify-around'>
-                  <Link href='https://skolers.org/materijali/covid-19/'>
-                    <img
-                      className="  "
-                      src="/Covid19.png"
-                      alt="image slide 2"
-                    />
-                  </Link>
-
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className=' flex justify-center sm:justify-around'>
-
-                  <Link href='https://enastava.skolers.org/'>
-                    <img
-                      className="  "
-                      src="/eNastava-logo-cyr.png"
-                      alt="image slide 2"
-                    />
-                  </Link>
-
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className=' flex  justify-center sm:justify-around'>
-                  <Link href='http://eobrazovanje.com/Pages/dositej.aspx'>
-                    <img
-                      className="  "
-                      src="/dositej-logo.png"
-                      alt="image slide 2"
-                    />
-                  </Link>
-                </div></SwiperSlide>
-            </Swiper>
-          </>
-        </section>
-
-        <section>
-
           <Footer />
         </section>
       </main>
-
     </div>
-  )
+  );
 }

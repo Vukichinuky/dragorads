@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import { links } from "./Mylinks";
 
 const NavLinks = () => {
@@ -26,28 +26,28 @@ const NavLinks = () => {
                   }`}
                 ></ion-icon>
               </span>
-             
             </h1>
             {link.submenu && (
               <div>
                 <div className=" hidden  group-hover:md:block hover:md:block">
-                 
                   <div className=" flex justify-center  items-center p-2 ">
-                    
                     {link.sublinks.map((mysublinks) => (
                       <div key={link.name}>
                         <h1 className="text-xs py-3 px-1 m-1  rounded-3xl  font-light">
                           {mysublinks.Head}
                         </h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li key={link.name} className="    text-slate-400 hover:bg-yellow-500 hover:text-white z-50 bg-zinc-700 py-4 px-5 mx-3 mb-4 rounded-3xl">
-                            <Link
-                              href={slink.link}
-                              className=" hover:text-primary"
+                          <Link
+                            href={slink.link}
+                            className=" hover:text-primary"
+                          >
+                            <li
+                              key={link.name}
+                              className="    text-slate-400 hover:bg-yellow-500 hover:text-white z-50 bg-zinc-700 py-4 px-5 mx-3 mb-4 rounded-3xl"
                             >
                               {slink.name}
-                            </Link>
-                          </li>
+                            </li>{" "}
+                          </Link>
                         ))}
                       </div>
                     ))}
@@ -92,8 +92,11 @@ const NavLinks = () => {
                     }`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li key={link.name} className="hover:text-yellow-400  text-center">
-                        <Link href={slink.link} >{slink.name}</Link>
+                      <li
+                        key={link.name}
+                        className="hover:text-yellow-400  text-center"
+                      >
+                        <Link href={slink.link}>{slink.name}</Link>
                       </li>
                     ))}
                   </div>
